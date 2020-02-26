@@ -9,7 +9,7 @@
         <!--Table View Controller-->
         <scene sceneID="JPb-bv-dZg">
             <objects>
-                <tableViewController id="PYA-L5-Mla" sceneMemberID="viewController">
+                <tableViewController id="PYA-L5-Mla" customClass="TableViewController" customModule="QiitaAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cQw-tb-TR9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,9 @@
                             <outlet property="delegate" destination="PYA-L5-Mla" id="tOk-ui-jCv"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="kFK-u2-JRL" id="9fX-E2-P5X"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xy8-Id-sNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

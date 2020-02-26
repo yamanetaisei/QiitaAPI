@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6AE6B7B4240677D900F280B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6B7B3240677D900F280B9 /* AppDelegate.swift */; };
 		6AE6B7B6240677D900F280B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6B7B5240677D900F280B9 /* SceneDelegate.swift */; };
-		6AE6B7B8240677D900F280B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6B7B7240677D900F280B9 /* ViewController.swift */; };
 		6AE6B7BB240677D900F280B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE6B7B9240677D900F280B9 /* Main.storyboard */; };
 		6AE6B7BD240677DA00F280B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AE6B7BC240677DA00F280B9 /* Assets.xcassets */; };
 		6AE6B7C0240677DA00F280B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE6B7BE240677DA00F280B9 /* LaunchScreen.storyboard */; };
+		6AE6B7C824068D0100F280B9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE6B7C724068D0100F280B9 /* TableViewController.swift */; };
 		E7C02CB2998ACADD98F9228E /* Pods_QiitaAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30484B70A479A6C6589C44CC /* Pods_QiitaAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +22,11 @@
 		6AE6B7B0240677D900F280B9 /* QiitaAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE6B7B3240677D900F280B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AE6B7B5240677D900F280B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6AE6B7B7240677D900F280B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AE6B7BA240677D900F280B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AE6B7BC240677DA00F280B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AE6B7BF240677DA00F280B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AE6B7C1240677DA00F280B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AE6B7C724068D0100F280B9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = /Users/taisei/Work/QiitaAPI/QiitaAPI/QiitaAPI/TableViewController.swift; sourceTree = "<absolute>"; };
 		BED43D803ECB2B2436DED185 /* Pods-QiitaAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaAPI.debug.xcconfig"; path = "Target Support Files/Pods-QiitaAPI/Pods-QiitaAPI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			children = (
 				6AE6B7B3240677D900F280B9 /* AppDelegate.swift */,
 				6AE6B7B5240677D900F280B9 /* SceneDelegate.swift */,
-				6AE6B7B7240677D900F280B9 /* ViewController.swift */,
+				6AE6B7C724068D0100F280B9 /* TableViewController.swift */,
 				6AE6B7B9240677D900F280B9 /* Main.storyboard */,
 				6AE6B7BC240677DA00F280B9 /* Assets.xcassets */,
 				6AE6B7BE240677DA00F280B9 /* LaunchScreen.storyboard */,
@@ -88,7 +88,6 @@
 				BED43D803ECB2B2436DED185 /* Pods-QiitaAPI.debug.xcconfig */,
 				2566F7EF4A09BBB80BF7517A /* Pods-QiitaAPI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,8 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AE6B7B8240677D900F280B9 /* ViewController.swift in Sources */,
 				6AE6B7B4240677D900F280B9 /* AppDelegate.swift in Sources */,
+				6AE6B7C824068D0100F280B9 /* TableViewController.swift in Sources */,
 				6AE6B7B6240677D900F280B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
