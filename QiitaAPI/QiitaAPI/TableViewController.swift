@@ -18,10 +18,12 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
     let baseURL = "https://qiita.com/api/v2/items"
     
     func getArticleData(url : String){
-        
+        //urlの受け渡し
         AF.request(baseURL, method: .get)
+            //↑に対するレスポンスについて
             .responseJSON{ response in
                 switch response.result {
+                //レスポンスがきた
                 case .success(let value):
                     print("Success! Got the data")
                     let articles : JSON = JSON(value)
@@ -29,6 +31,7 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
                             self.articles = article as! [[String: AnyObject]]
                             print(articles)
                     }
+                //返ってこない
                 case .failure(let error):
                     print(error)
                 }
