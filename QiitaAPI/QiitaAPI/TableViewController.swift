@@ -26,8 +26,10 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
                 //レスポンスがきた
                 case .success(let value):
                     print("Success! Got the data")
-                    let articles : JSON = JSON(value)
+                    let articles: JSON = JSON(value)
+                    // APIから取得した値が配列の形か判定
                         if let article = articles.arrayObject {
+                            // JSONの形式からString型へ強制キャスト
                             self.articles = article as! [[String: AnyObject]]
                             print(articles)
                     }
