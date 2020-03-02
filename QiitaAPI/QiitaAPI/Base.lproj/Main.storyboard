@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="2012" y="138.91625615763547"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="xeK-A4-w8Q">
             <objects>
-                <viewController id="mqj-Wv-N0e" sceneMemberID="viewController">
+                <viewController id="mqj-Wv-N0e" customClass="DetailViewController" customModule="QiitaAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HhJ-w5-d03">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

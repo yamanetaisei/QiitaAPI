@@ -9,6 +9,6 @@
 import UIKit
 import WebKit
 
-class DetailViewControler: UIViewController{
+class DetailViewController: UIViewController{
     
 }
