@@ -44,8 +44,6 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
         getArticleData(url: baseURL + "?page=1&query=tag%3A" + searchBar.text!)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
