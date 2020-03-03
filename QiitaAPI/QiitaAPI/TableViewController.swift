@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+var articlePath: [String : AnyObject]?
+
 class TableViewConroller:UITableViewController,UISearchBarDelegate{
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -59,8 +61,8 @@ extension TableViewConroller{
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        let articlePath = articles[indexPath.row]
-        cell?.textLabel?.text = articlePath["title"] as? String
+        articlePath = articles[indexPath.row]
+        cell?.textLabel?.text = articlePath?["title"] as? String
         return cell!
     }
 }
