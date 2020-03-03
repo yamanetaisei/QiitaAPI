@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+var detailUrl:String?
+
 class TableViewConroller:UITableViewController,UISearchBarDelegate{
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -26,8 +28,10 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
                 //レスポンスがきた
                 case .success(let value):
                     print("Success! Got the data")
-                    let articles : JSON = JSON(value)
+                    let articles: JSON = JSON(value)
+                    // APIから取得した値が配列の形か判定
                         if let article = articles.arrayObject {
+                            // JSONの形式からString型へ強制キャスト
                             self.articles = article as! [[String: AnyObject]]
                             print(articles)
                     }
@@ -43,8 +47,6 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         getArticleData(url: baseURL + "?page=1&query=tag%3A" + searchBar.text!)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,5 +64,10 @@ extension TableViewConroller{
         let articlePath = articles[indexPath.row]
         cell?.textLabel?.text = articlePath["title"] as? String
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let articleDetail = articles[indexPath.row]
+        detailUrl = articleDetail["url"] as? String
     }
 }

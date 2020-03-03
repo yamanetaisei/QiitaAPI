@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rsC-wU-anP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tOI-hn-sAm">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Conroller-->
+        <!--記事一覧-->
         <scene sceneID="aj1-lH-dXo">
             <objects>
                 <tableViewController id="rsC-wU-anP" customClass="TableViewConroller" customModule="QiitaAPI" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,6 +28,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mqj-Wv-N0e" kind="show" id="xdJ-Ln-Gk4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,13 +38,67 @@
                             <outlet property="delegate" destination="rsC-wU-anP" id="H3a-DR-pFE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="記事一覧" id="osS-4H-6aC"/>
                     <connections>
                         <outlet property="searchBar" destination="dNY-7Q-xlE" id="jaF-Ec-TYT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ede-RZ-5co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="139"/>
+            <point key="canvasLocation" x="2012" y="138.91625615763547"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xeK-A4-w8Q">
+            <objects>
+                <viewController id="mqj-Wv-N0e" customClass="DetailViewController" customModule="QiitaAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HhJ-w5-d03">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7H5-tG-HtT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7H5-tG-HtT" firstAttribute="centerX" secondItem="HhJ-w5-d03" secondAttribute="centerX" id="Zu8-3m-L57"/>
+                            <constraint firstItem="7H5-tG-HtT" firstAttribute="top" secondItem="HhJ-w5-d03" secondAttribute="topMargin" constant="-88" id="fRb-BH-LWs"/>
+                            <constraint firstItem="7H5-tG-HtT" firstAttribute="leading" secondItem="2Wg-aF-5VN" secondAttribute="leading" id="gqR-UJ-v0g"/>
+                            <constraint firstItem="7H5-tG-HtT" firstAttribute="centerY" secondItem="HhJ-w5-d03" secondAttribute="centerY" id="lkc-1X-m6S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Wg-aF-5VN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RBL-ID-HVO"/>
+                    <connections>
+                        <outlet property="webView" destination="7H5-tG-HtT" id="5EK-sr-8fI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXQ-sr-W6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2957.5999999999999" y="146.30541871921181"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IhR-hY-DnK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tOI-hn-sAm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sLx-Cp-43y">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rsC-wU-anP" kind="relationship" relationship="rootViewController" id="Kmj-77-3tO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzp-ua-17V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="138.91625615763547"/>
         </scene>
     </scenes>
 </document>
