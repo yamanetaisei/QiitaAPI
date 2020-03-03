@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 var articlePath: [String : AnyObject]?
+var path: Int?
+var detailUrl:String?
 
 class TableViewConroller:UITableViewController,UISearchBarDelegate{
     
@@ -64,5 +66,11 @@ extension TableViewConroller{
         articlePath = articles[indexPath.row]
         cell?.textLabel?.text = articlePath?["title"] as? String
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        path = indexPath.row
+        let articleDetail = articles[indexPath.row]
+        detailUrl = articleDetail["url"] as? String
     }
 }

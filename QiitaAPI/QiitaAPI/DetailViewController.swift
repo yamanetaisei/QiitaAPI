@@ -13,8 +13,6 @@ class DetailViewController: UIViewController{
     
     @IBOutlet weak var webView: WKWebView!
     
-    var detailUrl = articlePath?["url"] as? String
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
