@@ -56,12 +56,17 @@ class TableViewConroller:UITableViewController,UISearchBarDelegate{
 }
 
 extension TableViewConroller{
+    //cellの個数について
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
+    //cellに値（タイトル）を代入
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->UITableViewCell {
+        //どのCellか定義
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        //タイトルを代入するか変数
         let articlePath = articles[indexPath.row]
+        // それぞれのcellに代入
         cell?.textLabel?.text = articlePath["title"] as? String
         return cell!
     }
