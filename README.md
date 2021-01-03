@@ -5,3 +5,7 @@ Qiitaのトレンド記事が簡単に閲覧できるアプリ
 
 ## デモ
 詳しい実行画面は[こちら](https://drive.google.com/file/d/1YWNOc9S-4q3K2vy0lvGoL0ZHMYunRwyV/view?usp=sharing)
+
+## 使用技術
+[Alamofire](https://github.com/Alamofire/Alamofire)
+[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
